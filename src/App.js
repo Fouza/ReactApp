@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home/Home';
+import Contact from './pages/Contact/Contact';
+import Layout from './layout/Layout'
+import Area from './pages/Area/Area';
+import IpAdress from './pages/IpAdress/IpAdress';
+import './scss/shared.scss'
 
-function App() {
+export default function App() {
+
+  const [initial_counter, setInitialCounter] = useState(100)
+  const phrase = 'Initial Phrase'
+  // /admin/users/employees
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/area" element={<Area />} />
+          <Route path="/ip_address" element={<IpAdress />} />
+        </Route>
+
+        {/* Create LayoutAdmin, ProductsPage, Employees */}
+        {/* <Route path='/admin' element={<LayoutAdmin />} >
+          <Route index element={<ProductsPage />} />
+          <Route path="employees" element={<Employees />} />
+        </Route> */}
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+
+
+// return (
+//   <div className="App">
+//     <ShowHideComp init_count={initial_counter} />
+//     {/* <Counter init_count={initial_counter} phrase={phrase} /> */}
+//     <MyComponent />
+//     <Inpt />
+//   </div>
+// );

@@ -1,38 +1,217 @@
-.App {
-  text-align: center;
+body {
+    /* padding-top: 50px; */
+    margin: 0;
+    background-color: #f1d7ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    background-color: #b298c1;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    position: relative;
+    width: 65px;
+    background-size: contain;
 }
 
-.App-link {
-  color: #61dafb;
+li {
+    display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.container
+ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 40px 10px 10px; 
+    background-color: white;
+    border-radius: 12px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.t {
+    font-size: 30px;
+    color: #a87bc7;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+}
+
+
+.nwc,.gloss,.brush,.bag {
+    height: 100%;
+    max-width: 80%;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    .nwc,
+    .gloss,
+    .brush,
+    .bag {
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px 0;
+    }
+
+    .t1,.t2,.t3,.t4  {
+        font-size: 25px;
+    }
+}
+
+.small-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+
+.small-box {
+    flex: 1;
+    height: 150px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 10px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 24px;
+    color: #a87bc7;
+}
+
+.small-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.glossproduct, .blender, .eyeliner {
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+.last-section {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 0 1 150px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; 
+    background-color: white; 
+    border-radius: 8px; 
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    font-size: 24px; 
+    color: #a87bc7; 
+}
+
+.item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+#item3 {
+    margin-left: auto; 
+    margin-right: 0; 
+}
+
+
+.footer {
+    background-color: #b298c1;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+
+.footer-left {
+    width: 30%;
+    text-align: left;
+    margin-right: 40px;
+}
+.footer-left h3  {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+.footer-company-name {
+    color: #f1d7ff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+.footer-center  {
+   margin-left: 40px;
+   margin-right: 40px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+   
+   
+    
+}
+.link{
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+.footer-right p,span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    text-align: right;
+    
 }

@@ -1,0 +1,12 @@
+.form_container{
+    display: flex;
+    border: 1px solid #CCC;
+}
+
+.redc{
+    background-color: red
+}
+
+.greenc{
+    background-color: green
+}
